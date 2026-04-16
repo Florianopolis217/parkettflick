@@ -172,6 +172,12 @@ h1 {
   inset: 0;
 }
 
+.hero-launch__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-launch__img {
   width: 100%;
   height: 100%;
@@ -339,7 +345,8 @@ h1 {
 .project-mocks {
   display: grid;
   gap: 2.25rem;
-  max-width: 920px;
+  width: 100%;
+  max-width: min(1040px, 100%);
   margin: 0 auto;
 }
 
@@ -376,10 +383,14 @@ h1 {
 
 .project-mock__compare--triple {
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.1rem;
 }
 
 .project-mock__shot {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
 .project-mock__frame {
@@ -389,6 +400,26 @@ h1 {
   border: 1px solid var(--line);
   background: #f0ebe3;
   aspect-ratio: 4 / 3;
+}
+
+/* Dreier-Galerie: höhere Bilder, mehr Boden im Bildausschnitt */
+.project-mock__compare--triple .project-mock__frame {
+  aspect-ratio: 3 / 4;
+  min-height: 12.5rem;
+}
+
+.project-mock__caption {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--muted);
+  text-align: center;
+}
+
+.project-mock__frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .project-mock__img {
@@ -451,7 +482,7 @@ main#main-content > .section-intro {
 }
 
 main#main-content > .section-intro--projekte-mocks {
-  contain-intrinsic-size: auto 1100px;
+  contain-intrinsic-size: auto 1280px;
 }
 
 main#main-content > .section-muted {
@@ -479,7 +510,14 @@ main#main-content > .section-process {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("section-audience-bg.jpg") center bottom / cover no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("section-audience-bg.jpg");
+  background-image: image-set(
+    url("section-audience-bg.avif") type("image/avif"),
+    url("section-audience-bg.jpg") type("image/jpeg")
+  );
   transform: scale(1.01);
   transform-origin: center bottom;
 }
@@ -1932,6 +1970,11 @@ section {
   box-shadow: 0 16px 44px rgba(42, 38, 31, 0.11);
 }
 
+.material-card__visual picture {
+  display: block;
+  width: 100%;
+}
+
 .material-card__visual img {
   width: 100%;
   height: 230px;
@@ -1988,6 +2031,11 @@ section {
   padding: 0;
   line-height: 0;
   overflow: hidden;
+}
+
+.legal-strip picture {
+  display: block;
+  width: 100%;
 }
 
 .legal-strip__img {

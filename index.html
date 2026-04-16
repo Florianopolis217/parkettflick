@@ -14,7 +14,8 @@
     <link
       rel="preload"
       as="image"
-      href="hero-parkett.jpg"
+      href="hero-parkett.avif"
+      type="image/avif"
       fetchpriority="high"
     />
     <link
@@ -50,15 +51,18 @@
     <main id="main-content">
       <section class="hero-launch" aria-labelledby="hero-title">
         <div class="hero-launch__media">
-          <img
-            class="hero-launch__img"
-            src="hero-parkett.jpg"
-            width="1600"
-            height="2400"
-            alt="Heller Wohnraum mit hellem Fischgrät-Parkett am Boden"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="hero-parkett.avif" type="image/avif" />
+            <img
+              class="hero-launch__img"
+              src="hero-parkett.jpg"
+              width="1600"
+              height="2400"
+              alt="Heller Wohnraum mit hellem Fischgrät-Parkett am Boden"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <div class="hero-launch__shade" aria-hidden="true"></div>
         </div>
         <div class="container hero-launch__content">

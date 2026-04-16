@@ -39,15 +39,18 @@
 
     <main id="main-content">
       <section class="legal-strip" aria-label="Dekoration">
-        <img
-          class="legal-strip__img"
-          src="img-parkett.jpg"
-          width="2000"
-          height="640"
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
+        <picture>
+          <source srcset="img-parkett.avif" type="image/avif" />
+          <img
+            class="legal-strip__img"
+            src="img-parkett.jpg"
+            width="2000"
+            height="640"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </section>
       <section>
         <div class="container legal-text">

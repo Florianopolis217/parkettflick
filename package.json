@@ -1,0 +1,15 @@
+{
+  "name": "parkettflick",
+  "private": true,
+  "description": "Statische Website – Hilfsskripte für Bilder (AVIF)",
+  "scripts": {
+    "avif": "node scripts/convert-to-avif.mjs",
+    "avif:help": "node scripts/convert-to-avif.mjs --help"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
