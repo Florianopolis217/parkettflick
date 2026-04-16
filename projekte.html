@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Vielen Dank für Ihre Nachricht an parkettflick.ch."
+      content="Projekte und Referenzen von parkettflick.ch: Reparatur und Sanierung von Parkett, Vinyl und Laminat."
     />
-    <title>Nachricht gesendet | parkettflick.ch</title>
+    <title>Projekte | parkettflick.ch</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&display=swap"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
-  <body>
+  <body class="page-projects">
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header class="site-header">
       <div class="container topbar">
@@ -29,7 +32,7 @@
           <ul class="nav-list">
             <li><a href="index.html">Start</a></li>
             <li><a href="leistungen.html">Leistungen &amp; Preise</a></li>
-            <li><a href="projekte.html">Projekte</a></li>
+            <li><a href="projekte.html" aria-current="page">Projekte</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
@@ -38,22 +41,69 @@
     </header>
 
     <main id="main-content">
-      <section class="section-intro section-thanks">
+      <section
+        class="sub-hero sub-hero--bleed sub-hero--overlay"
+        aria-labelledby="projekte-hero-title"
+      >
+        <figure class="sub-hero__figure sub-hero__figure--bleed">
+          <img
+            src="material-showcase-parkett.jpg"
+            width="2400"
+            height="3600"
+            alt="Reparierter Parkettboden in einem Wohnraum"
+            loading="eager"
+            decoding="async"
+            class="sub-hero__img sub-hero__img--fullwidth"
+          />
+          <div class="sub-hero__overlay">
+            <div class="container">
+              <div class="sub-hero__text">
+                <span class="kicker">Referenzen</span>
+                <h1 id="projekte-hero-title">Projekte</h1>
+                <p class="lead">
+                  Einblicke in abgeschlossene Arbeiten – von punktuellen
+                  Reparaturen bis zu grösseren Teil-Sanierungen. Jedes Schadensbild
+                  ist anders; unsere Offerten und Abläufe bleiben nachvollziehbar
+                  in CHF.
+                </p>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section class="section-intro" aria-labelledby="projekte-intro-title">
         <div class="container">
-          <p class="kicker">parkettflick.ch</p>
-          <h1 class="section-title">Danke für Ihre Nachricht</h1>
+          <h2 class="section-title" id="projekte-intro-title">
+            Qualität, die man sieht
+          </h2>
           <p class="section-lead">
-            Wir haben Ihre Anfrage erhalten und melden uns in der Regel
-            innerhalb eines Werktags.
+            Hier zeigen wir ausgewählte Einsätze. Für eine Einschätzung zu Ihrem
+            Boden genügt oft eine kurze Anfrage mit Foto –
+            <a href="kontakt.html#formular">zum Kontaktformular</a>.
           </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="index.html">Zur Startseite</a>
-            <a class="btn btn-secondary" href="leistungen.html"
-              >Leistungen &amp; Preise</a
-            >
-            <a class="btn btn-secondary" href="kontakt.html#formular"
-              >Neue Nachricht senden</a
-            >
+          <div class="grid-3 intro-cards">
+            <article class="intro-card">
+              <h3>Parkett</h3>
+              <p class="muted">
+                Kratzer, Fugen, Stellen mit Abnutzung – wir stimmen Reparatur
+                und Farbton auf den Bestand ab.
+              </p>
+            </article>
+            <article class="intro-card">
+              <h3>Vinyl &amp; Designboden</h3>
+              <p class="muted">
+                Beschädigungen und Kanten – sauber eingearbeitet, damit der
+                Gesamteindruck wieder stimmig wirkt.
+              </p>
+            </article>
+            <article class="intro-card">
+              <h3>Laminat</h3>
+              <p class="muted">
+                Teilflächen und Übergänge – dort, wo ein Austausch der ganzen
+                Fläche nicht nötig ist.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -80,7 +130,7 @@
             <ul>
               <li><a href="index.html">Start</a></li>
               <li><a href="leistungen.html">Leistungen &amp; Preise</a></li>
-              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="projekte.html" aria-current="page">Projekte</a></li>
               <li><a href="ueber-uns.html">Über uns</a></li>
               <li><a href="kontakt.html">Kontakt</a></li>
             </ul>

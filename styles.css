@@ -625,6 +625,68 @@ main#main-content > .section-process {
   margin-bottom: 0;
 }
 
+.contact-page__instagram {
+  margin-top: 1.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px dashed var(--line);
+}
+
+.instagram-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0.65rem 0.45rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration: none;
+  color: var(--brown-700);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.instagram-toggle:hover {
+  text-decoration: none;
+  border-color: #c9bfb0;
+  box-shadow: 0 6px 18px rgba(42, 38, 31, 0.08);
+  color: var(--green-700);
+}
+
+.instagram-toggle:focus-visible {
+  outline: 3px solid #6da37c;
+  outline-offset: 2px;
+}
+
+.instagram-toggle__track {
+  display: inline-block;
+  width: 2.65rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #f58529 0%, #dd2a7b 45%, #8134af 100%);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.instagram-toggle__knob {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+}
+
+.instagram-toggle__label {
+  padding-right: 0.1rem;
+}
+
 @media (max-width: 900px) {
   .contact-page__grid {
     grid-template-columns: 1fr;
@@ -1216,6 +1278,12 @@ section {
 
 .footer-legal a[aria-current="page"] {
   color: var(--green-700);
+}
+
+.footer-instagram::after {
+  content: " ↗";
+  font-size: 0.85em;
+  opacity: 0.75;
 }
 
 .footer-copy {
