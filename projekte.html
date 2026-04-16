@@ -42,7 +42,7 @@
 
     <main id="main-content">
       <section
-        class="sub-hero sub-hero--bleed sub-hero--overlay"
+        class="sub-hero sub-hero--bleed sub-hero--overlay sub-hero--projects"
         aria-labelledby="projekte-hero-title"
       >
         <figure class="sub-hero__figure sub-hero__figure--bleed">
@@ -53,7 +53,7 @@
             alt="Reparierter Parkettboden in einem Wohnraum"
             loading="eager"
             decoding="async"
-            class="sub-hero__img sub-hero__img--fullwidth"
+            class="sub-hero__img sub-hero__img--fullwidth sub-hero__img--crop-top-half"
           />
           <div class="sub-hero__overlay">
             <div class="container">
@@ -72,37 +72,122 @@
         </figure>
       </section>
 
-      <section class="section-intro" aria-labelledby="projekte-intro-title">
+      <section
+        class="section-intro section-intro--projekte-mocks"
+        aria-labelledby="projekte-intro-title"
+      >
         <div class="container">
           <h2 class="section-title" id="projekte-intro-title">
             Qualität, die man sieht
           </h2>
           <p class="section-lead">
-            Hier zeigen wir ausgewählte Einsätze. Für eine Einschätzung zu Ihrem
-            Boden genügt oft eine kurze Anfrage mit Foto –
+            Hier zeigen wir ausgewählte Einsätze (Beispiele). Für eine
+            Einschätzung zu Ihrem Boden genügt oft eine kurze Anfrage mit Foto –
             <a href="kontakt.html#formular">zum Kontaktformular</a>.
           </p>
-          <div class="grid-3 intro-cards">
-            <article class="intro-card">
-              <h3>Parkett</h3>
-              <p class="muted">
-                Kratzer, Fugen, Stellen mit Abnutzung – wir stimmen Reparatur
-                und Farbton auf den Bestand ab.
-              </p>
+          <div class="project-mocks">
+            <article class="project-mock">
+              <div class="project-mock__head">
+                <h3>Parkett – lokale Schadstelle</h3>
+                <p class="muted project-mock__meta">
+                  Massivholz · Nachbesserung von Kratzern und ausgeblichenen
+                  Stellen, Abstimmung mit dem Bestand.
+                </p>
+              </div>
+              <div
+                class="project-mock__compare project-mock__compare--triple"
+                role="group"
+                aria-label="Parkett: drei Aufnahmen zum Schadensbild (Beispielbilder)"
+              >
+                <figure class="project-mock__shot">
+                  <div class="project-mock__frame">
+                    <img
+                      src="bodenkabutt.svg1.HEIC"
+                      alt="Parkett Schadensbild, Aufnahme 1"
+                      loading="lazy"
+                      decoding="async"
+                      class="project-mock__img"
+                    />
+                    <span class="project-mock__badge project-mock__badge--step"
+                      >1</span
+                    >
+                  </div>
+                </figure>
+                <figure class="project-mock__shot">
+                  <div class="project-mock__frame">
+                    <img
+                      src="bodenkabutt.svg2.HEIC"
+                      alt="Parkett Schadensbild, Aufnahme 2"
+                      loading="lazy"
+                      decoding="async"
+                      class="project-mock__img"
+                    />
+                    <span class="project-mock__badge project-mock__badge--step"
+                      >2</span
+                    >
+                  </div>
+                </figure>
+                <figure class="project-mock__shot">
+                  <div class="project-mock__frame">
+                    <img
+                      src="bodenkabutt.svg3.HEIC"
+                      alt="Parkett Schadensbild, Aufnahme 3"
+                      loading="lazy"
+                      decoding="async"
+                      class="project-mock__img"
+                    />
+                    <span class="project-mock__badge project-mock__badge--step"
+                      >3</span
+                    >
+                  </div>
+                </figure>
+              </div>
             </article>
-            <article class="intro-card">
-              <h3>Vinyl &amp; Designboden</h3>
-              <p class="muted">
-                Beschädigungen und Kanten – sauber eingearbeitet, damit der
-                Gesamteindruck wieder stimmig wirkt.
-              </p>
-            </article>
-            <article class="intro-card">
-              <h3>Laminat</h3>
-              <p class="muted">
-                Teilflächen und Übergänge – dort, wo ein Austausch der ganzen
-                Fläche nicht nötig ist.
-              </p>
+            <article class="project-mock">
+              <div class="project-mock__head">
+                <h3>Vinyl – Kanten &amp; Nutzungsspuren</h3>
+                <p class="muted project-mock__meta">
+                  Designboden · Kanten und Oberfläche wieder in Linie gebracht.
+                </p>
+              </div>
+              <div
+                class="project-mock__compare"
+                role="group"
+                aria-label="Vinyl: Vorher und Nachher (Beispielbilder)"
+              >
+                <figure class="project-mock__shot">
+                  <div class="project-mock__frame">
+                    <img
+                      src="price-vinyl-beschaedigt.jpg"
+                      width="2000"
+                      height="1333"
+                      alt="Beispiel Vorher: beschädigter Vinylboden"
+                      loading="lazy"
+                      decoding="async"
+                      class="project-mock__img"
+                    />
+                    <span class="project-mock__badge project-mock__badge--before"
+                      >Vorher</span
+                    >
+                  </div>
+                </figure>
+                <figure class="project-mock__shot">
+                  <div class="project-mock__frame">
+                    <img
+                      src="material-laminat-vinyl-boden.jpg"
+                      width="2000"
+                      height="1329"
+                      alt="Beispiel Nachher: sanierte Vinylfläche"
+                      loading="lazy"
+                      decoding="async"
+                      class="project-mock__img"
+                    />
+                    <span class="project-mock__badge project-mock__badge--after"
+                      >Nachher</span
+                    >
+                  </div>
+                </figure>
+              </div>
             </article>
           </div>
         </div>
