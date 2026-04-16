@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontakt und Offerte bei parkettflick.ch: Anfrage mit Foto, Antwort in der Regel innerhalb eines Werktags. Parkett, Vinyl und Laminat in der Schweiz."
+    />
+    <title>Kontakt &amp; Offerte | parkettflick.ch</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body class="page-contact">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="index.html">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span>parkettflick.ch</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="leistungen.html">Leistungen &amp; Preise</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="agb.html">AGB</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section
+        class="sub-hero sub-hero--bleed sub-hero--overlay sub-hero--contact"
+        aria-labelledby="kontakt-hero-title"
+      >
+        <figure class="sub-hero__figure sub-hero__figure--bleed">
+          <img
+            src="hero-parkett.jpg"
+            width="2400"
+            height="1600"
+            alt="Dekoratives Foto: Fischgrät-Parkett in einem hellen Raum"
+            loading="eager"
+            decoding="async"
+            class="sub-hero__img sub-hero__img--fullwidth"
+          />
+          <div class="sub-hero__overlay">
+            <div class="container">
+              <div class="sub-hero__text">
+                <span class="kicker">Kontakt</span>
+                <h1 id="kontakt-hero-title">Offerte oder Frage?</h1>
+                <p class="lead">
+                  Schreiben Sie uns – wir melden uns in der Regel innerhalb eines
+                  Werktags. Alle Preise und Abläufe transparent in CHF.
+                </p>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section class="section-cta contact-page" aria-labelledby="kontakt-form-title">
+        <div class="container contact-page__grid">
+          <div class="contact-page__form-col" id="formular">
+            <div class="cta-panel cta-panel--form">
+              <h2 id="kontakt-form-title" class="section-title">
+                Nachricht senden
+              </h2>
+              <p class="muted">
+                Pflichtfelder sind gekennzeichnet. Je genauer die Angaben (z. B.
+                Foto des Schadens), desto zielgerichteter unsere Rückmeldung.
+              </p>
+              <!-- Web3Forms: access_key durch eigenen Key von web3forms.com ersetzen -->
+              <form
+                class="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Anfrage parkettflick.ch"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="kontakt-danke.html"
+                />
+                <input
+                  type="text"
+                  name="honeypot"
+                  class="contact-form__honeypot"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="contact-name"
+                    >Name</label
+                  >
+                  <input
+                    class="contact-form__input"
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="contact-email"
+                    >E-Mail</label
+                  >
+                  <input
+                    class="contact-form__input"
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="contact-phone"
+                    >Telefon
+                    <span class="contact-form__optional">(optional)</span></label
+                  >
+                  <input
+                    class="contact-form__input"
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                  />
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="contact-message"
+                    >Nachricht</label
+                  >
+                  <textarea
+                    class="contact-form__input contact-form__textarea"
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="contact-form__row contact-form__row--check">
+                  <label class="contact-form__check-label">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      value="yes"
+                      required
+                    />
+                    <span
+                      >Ich habe die
+                      <a href="datenschutz.html">Datenschutzerklärung</a>
+                      gelesen und stimme der Verarbeitung meiner Angaben zur
+                      Bearbeitung der Anfrage zu.</span
+                    >
+                  </label>
+                </div>
+                <div class="contact-form__actions">
+                  <button class="btn btn-primary" type="submit">
+                    Nachricht senden
+                  </button>
+                </div>
+              </form>
+              <p class="contact-form__alt muted">
+                Oder direkt:
+                <a href="mailto:info@parkettflick.ch">info@parkettflick.ch</a>
+                ·
+                <a href="tel:+41440000000">+41 44 000 00 00</a>
+              </p>
+              <p class="fine-print">
+                Hinweise zur Datenverarbeitung finden Sie in der
+                <a href="datenschutz.html">Datenschutzerklärung</a>.
+              </p>
+            </div>
+          </div>
+          <aside class="contact-page__aside" aria-label="Direktkontakt und Hinweise">
+            <div class="panel">
+              <h2>Direktkontakt</h2>
+              <p class="contact-page__direct">
+                <a href="mailto:info@parkettflick.ch">info@parkettflick.ch</a
+                ><br />
+                <a href="tel:+41440000000">+41 44 000 00 00</a>
+              </p>
+              <p class="fine-print">
+                Kontaktdaten sind Platzhalter – bitte durch Ihre echten Angaben
+                ersetzen.
+              </p>
+              <p class="contact-page__list-title">Für eine schnelle Offerte</p>
+              <ul class="contact-page__list">
+                <li>Foto des Schadens (gute Beleuchtung)</li>
+                <li>Ort / Region in der Schweiz</li>
+                <li>Art des Bodens (Parkett, Vinyl, Laminat), wenn bekannt</li>
+                <li>Gewünschter Zeitraum für den Termin</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="footer-brand__name" href="index.html">
+              <span class="logo-dot" aria-hidden="true"></span>
+              parkettflick.ch
+            </a>
+            <p class="footer-brand__tagline">
+              Parkett, Vinyl &amp; Laminat – Reparatur mit klaren Preisen
+            </p>
+            <p class="footer-copy">
+              <span class="footer-copy__main">&copy; 2026 parkettflick.ch</span>
+              <span class="footer-copy__sep" aria-hidden="true">·</span>
+              <span class="footer-copy__locale">Schweiz</span>
+            </p>
+          </div>
+          <nav class="footer-nav" aria-label="Schnellzugriff">
+            <ul>
+              <li><a href="index.html">Start</a></li>
+              <li><a href="leistungen.html">Leistungen &amp; Preise</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+            </ul>
+          </nav>
+          <div class="footer-legal">
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var panel = document.querySelector(".contact-page .cta-panel");
+        if (!panel) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          panel.classList.add("cta-panel--visible");
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                panel.classList.add("cta-panel--visible");
+                io.unobserve(panel);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+        );
+        io.observe(panel);
+      })();
+    </script>
+  </body>
+</html>

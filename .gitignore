@@ -1,0 +1,10 @@
+.DS_Store
+.vercel
+.env
+.env.*
+!.env.example
+node_modules/
+
+# Interne Dokumente (nicht für die Live-Site)
+*.docx
+businessplan_extracted.txt
