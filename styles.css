@@ -337,9 +337,46 @@ h1 {
   }
 }
 
-/* Projekte: Mock-Referenzen Vorher / Nachher */
-.section-intro--projekte-mocks .section-lead {
-  margin-bottom: 2rem;
+/* Projekte: Referenzgalerien – kompakterer Abstand zur Hero-Sektion und zur ersten Karte */
+.section-intro.section-intro--projekte-gallery {
+  padding-top: 0.7rem;
+  padding-bottom: 1.2rem;
+}
+
+.section-intro--projekte-gallery .section-title {
+  margin-bottom: 0.15rem;
+}
+
+.section-intro--projekte-gallery .section-lead {
+  margin-top: 0.12rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-mock__result {
+  margin: 0 auto 1.25rem;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 52ch;
+}
+
+.page-projects .projekte-page__cta .section-title {
+  margin-bottom: 0.65rem;
+  text-align: center;
+}
+
+.projekte-page__cta-lead {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.page-projects .projekte-page__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  margin-top: 1.35rem;
 }
 
 .project-mocks {
@@ -348,6 +385,10 @@ h1 {
   width: 100%;
   max-width: min(1040px, 100%);
   margin: 0 auto;
+}
+
+.section-intro--projekte-gallery .project-mocks {
+  margin-top: -2.25rem;
 }
 
 .project-mock {
@@ -372,6 +413,10 @@ h1 {
   max-width: 52ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+.project-mock:has(.project-mock__result) .project-mock__meta {
+  margin-bottom: 0.65rem;
 }
 
 .project-mock__compare {
@@ -481,7 +526,7 @@ main#main-content > .section-intro {
   contain-intrinsic-size: auto 420px;
 }
 
-main#main-content > .section-intro--projekte-mocks {
+main#main-content > .section-intro--projekte-gallery {
   contain-intrinsic-size: auto 1280px;
 }
 
@@ -522,6 +567,15 @@ main#main-content > .section-process {
   transform-origin: center bottom;
 }
 
+/* Projekte: Abschluss-CTA – gleiches Motiv wie Referenz-PNG, eigene Assets */
+.page-projects .projekte-page__cta.section-muted::before {
+  background-image: url("projekte-cta-bg.jpg");
+  background-image: image-set(
+    url("projekte-cta-bg.avif") type("image/avif"),
+    url("projekte-cta-bg.jpg") type("image/jpeg")
+  );
+}
+
 .section-muted::after {
   content: "";
   position: absolute;
@@ -547,15 +601,33 @@ main#main-content > .section-process {
   display: none;
 }
 
-/* Startseite: Text auf klarem Panel, Boden drumherum gut sichtbar */
+/* Startseite: Glas-Panel – Hintergrund erkennbar, Text lesbar (Blur + leichte Schatten) */
 .section-muted:has(.split-2) .split-2 {
-  background: rgba(255, 252, 247, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 252, 247, 0.48);
+  backdrop-filter: blur(16px) saturate(1.06);
+  -webkit-backdrop-filter: blur(16px) saturate(1.06);
   border-radius: var(--radius-md);
   padding: 1.75rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 8px 40px rgba(42, 38, 31, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 8px 36px rgba(42, 38, 31, 0.06);
+}
+
+.section-muted:has(.split-2) .split-2 .section-title,
+.section-muted:has(.split-2) .split-2 .muted,
+.section-muted:has(.split-2) .split-2 .audience-list {
+  text-shadow:
+    0 0 0.65em rgba(255, 253, 248, 0.92),
+    0 0.06em 0.12em rgba(42, 38, 31, 0.08);
+}
+
+.section-muted:has(.split-2) .audience-list li {
+  border-bottom-color: rgba(216, 207, 191, 0.55);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .section-muted:has(.split-2) .split-2 {
+    background: rgba(255, 252, 247, 0.86);
+  }
 }
 
 .split-2 {
@@ -1395,6 +1467,24 @@ section {
   opacity: 0.65;
 }
 
+.footer-copy__credit {
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+.footer-copy__link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-color: color-mix(in srgb, var(--muted) 45%, transparent);
+}
+
+.footer-copy__link:hover {
+  color: var(--green-700);
+  text-decoration-color: currentColor;
+}
+
 @media (max-width: 720px) {
   .footer-main {
     grid-template-columns: 1fr;
@@ -1420,6 +1510,11 @@ section {
   border-radius: var(--radius-lg);
   padding: 1rem 1.2rem;
   margin-bottom: 1rem;
+}
+
+.legal-meta {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
 }
 
 .legal-block {
@@ -1485,6 +1580,45 @@ section {
   box-shadow: none;
 }
 
+/* Unterseiten-Hero (Leistungen, Projekte, Über uns, Kontakt): volle Breite, gleicher Crop; Proportionen: --hero-img-w/--hero-img-h am section-Element */
+.sub-hero--full-image {
+  --hero-img-w: 1536;
+  --hero-img-h: 1024;
+}
+
+.sub-hero--full-image .sub-hero__figure--bleed {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Oben ~35 % und unten ~10 % des Motivs ausblenden, sichtbar: mittlere ~55 % der Bildhöhe */
+.sub-hero--full-image .sub-hero__figure--bleed picture {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: var(--hero-img-w) / calc(var(--hero-img-h) * 0.55);
+}
+
+.sub-hero--full-image .sub-hero__img.sub-hero__img--fullwidth {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--hero-img-w) / var(--hero-img-h);
+  max-width: none;
+  vertical-align: bottom;
+  object-fit: unset;
+  object-position: unset;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  transform: translateY(-35%);
+}
+
 /* Projekte: obere 50 % des Motivs ausblenden, untere Hälfte nutzen */
 .sub-hero--projects .sub-hero__figure--bleed {
   aspect-ratio: 15 / 7;
@@ -1497,27 +1631,18 @@ section {
   transform: translateY(-50%);
 }
 
-/* Kontakt: flacher Hero (~35 % der 15/7-Höhe), img ohne <picture>-Wrapper */
-.sub-hero--contact .sub-hero__figure--bleed {
-  aspect-ratio: 15 / 2.5;
-  overflow: hidden;
-}
-
-.sub-hero--contact .sub-hero__img--fullwidth {
-  object-position: center 52%;
-}
-
-.sub-hero--contact .sub-hero__overlay {
+/* Kontakt: kompakteres Overlay am Hero (nur wenn gleicher Hero wie andere Unterseiten) */
+body.page-contact .sub-hero--full-image .sub-hero__overlay {
   padding: clamp(0.75rem, 2.5vw, 1.25rem) 0
     clamp(1rem, 3vh, 1.65rem);
   align-items: flex-end;
 }
 
-.sub-hero--contact.sub-hero--overlay .sub-hero__text {
+body.page-contact .sub-hero--overlay .sub-hero__text {
   padding: 1.1rem 1.25rem 1.2rem;
 }
 
-.sub-hero--contact + .section-cta.contact-page {
+body.page-contact .section-cta.contact-page {
   padding-top: 2.85rem;
 }
 
@@ -1536,6 +1661,11 @@ section {
     transparent 72%
   );
   pointer-events: none;
+}
+
+/* Leistungen: kein Verlauf über dem Foto – Motiv in Originalfarben */
+.sub-hero--full-image .sub-hero__overlay {
+  background: none;
 }
 
 .sub-hero__overlay .container {
@@ -1613,44 +1743,6 @@ section {
   letter-spacing: 0.03em;
   color: rgba(200, 230, 210, 0.98);
   line-height: 1.45;
-}
-
-/* Über uns: helles „Papier/Naturlinoleum“-Kontrast statt dunklem Grün-Panel */
-.sub-hero--about .sub-hero__overlay {
-  background: linear-gradient(
-    to top,
-    rgba(62, 48, 38, 0.45) 0%,
-    rgba(120, 95, 75, 0.12) 48%,
-    transparent 78%
-  );
-}
-
-.sub-hero--about.sub-hero--overlay .sub-hero__text {
-  background: linear-gradient(
-    165deg,
-    rgba(255, 252, 247, 0.94) 0%,
-    rgba(241, 232, 218, 0.9) 55%,
-    rgba(232, 218, 198, 0.88) 100%
-  );
-  border: 1px solid rgba(79, 58, 44, 0.18);
-  box-shadow: 0 18px 44px rgba(42, 38, 31, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65);
-}
-
-.sub-hero--about.sub-hero--overlay .kicker {
-  color: var(--green-700);
-  background: rgba(47, 93, 67, 0.12);
-  border-color: rgba(47, 93, 67, 0.22);
-}
-
-.sub-hero--about.sub-hero--overlay h1 {
-  color: var(--brown-700);
-  text-shadow: none;
-}
-
-.sub-hero--about.sub-hero--overlay .lead {
-  color: #5c5348;
-  max-width: 42ch;
 }
 
 .sub-hero__figure--bleed .sub-hero__cap {

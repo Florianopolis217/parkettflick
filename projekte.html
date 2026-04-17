@@ -42,20 +42,27 @@
 
     <main id="main-content">
       <section
-        class="sub-hero sub-hero--bleed sub-hero--overlay sub-hero--projects"
+        class="sub-hero sub-hero--bleed sub-hero--overlay sub-hero--full-image"
         aria-labelledby="projekte-hero-title"
       >
         <figure class="sub-hero__figure sub-hero__figure--bleed">
           <picture>
-            <source srcset="material-showcase-parkett.avif" type="image/avif" />
+            <source
+              srcset="1fb09714-fa23-4891-bc28-060beec210bc.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="1fb09714-fa23-4891-bc28-060beec210bc.webp"
+              type="image/webp"
+            />
             <img
-              src="material-showcase-parkett.jpg"
-              width="2400"
-              height="3600"
-              alt="Reparierter Parkettboden in einem Wohnraum"
+              src="1fb09714-fa23-4891-bc28-060beec210bc.png"
+              width="1536"
+              height="1024"
+              alt=""
               loading="eager"
               decoding="async"
-              class="sub-hero__img sub-hero__img--fullwidth sub-hero__img--crop-top-half"
+              class="sub-hero__img sub-hero__img--fullwidth"
             />
           </picture>
           <div class="sub-hero__overlay">
@@ -69,6 +76,10 @@
                   ist anders; unsere Offerten und Abläufe bleiben nachvollziehbar
                   in CHF.
                 </p>
+                <p class="sub-hero__tagline">
+                  Saubere Ausführung, ehrliche Kommunikation – damit Sie vor dem
+                  Start wissen, was möglich ist.
+                </p>
               </div>
             </div>
           </div>
@@ -76,7 +87,7 @@
       </section>
 
       <section
-        class="section-intro section-intro--projekte-mocks"
+        class="section-intro section-intro--projekte-gallery"
         aria-labelledby="projekte-intro-title"
       >
         <div class="container">
@@ -84,8 +95,10 @@
             Qualität, die man sieht
           </h2>
           <p class="section-lead">
-            Hier zeigen wir ausgewählte Einsätze (Beispiele). Für eine
-            Einschätzung zu Ihrem Boden genügt oft eine kurze Anfrage mit Foto –
+            Ausgewählte Einsätze – vom kleinen Fleck bis zur grösseren Stelle.
+            Jedes Objekt ist anders; wir sagen Ihnen vorab, was realistisch
+            erreichbar ist. Für eine erste Einschätzung reicht oft eine kurze
+            Anfrage mit Foto –
             <a href="kontakt.html#formular">zum Kontaktformular</a>.
           </p>
           <div class="project-mocks">
@@ -97,10 +110,14 @@
                   Stellen, Abstimmung mit dem Bestand.
                 </p>
               </div>
+              <p class="muted project-mock__result">
+                Die Stelle fügt sich wieder in den Raum ein – ohne gleich den
+                ganzen Boden zu ersetzen.
+              </p>
               <div
                 class="project-mock__compare project-mock__compare--triple"
                 role="group"
-                aria-label="Parkett: drei Aufnahmen zum Schadensbild (Beispielbilder)"
+                aria-label="Parkett: drei Aufnahmen einer lokalen Schadstelle"
               >
                 <figure class="project-mock__shot">
                   <div class="project-mock__frame">
@@ -124,7 +141,7 @@
                     >
                   </div>
                   <figcaption class="project-mock__caption">
-                    Aufnahme 1 · Detail &amp; Bestand
+                    Schritt 1 · Detail &amp; Bestand
                   </figcaption>
                 </figure>
                 <figure class="project-mock__shot">
@@ -149,7 +166,7 @@
                     >
                   </div>
                   <figcaption class="project-mock__caption">
-                    Aufnahme 2 · Oberfläche im Zielbild
+                    Schritt 2 · Bearbeiteter Bereich
                   </figcaption>
                 </figure>
                 <figure class="project-mock__shot">
@@ -174,7 +191,7 @@
                     >
                   </div>
                   <figcaption class="project-mock__caption">
-                    Aufnahme 3 · Überblick Schadstelle
+                    Schritt 3 · Einordnung im Raum
                   </figcaption>
                 </figure>
               </div>
@@ -186,23 +203,27 @@
                   Designboden · Kanten und Oberfläche wieder in Linie gebracht.
                 </p>
               </div>
+              <p class="muted project-mock__result">
+                Kante und Fläche wirken wieder ruhig und einheitlich – fit für
+                den Alltag.
+              </p>
               <div
                 class="project-mock__compare"
                 role="group"
-                aria-label="Vinyl: Vorher und Nachher (Beispielbilder)"
+                aria-label="Vinyl: Zustand vor und nach der Reparatur"
               >
                 <figure class="project-mock__shot">
                   <div class="project-mock__frame">
                     <picture>
                       <source
-                        srcset="price-vinyl-beschaedigt.avif"
+                        srcset="projekte-vinyl-vorher.avif"
                         type="image/avif"
                       />
                       <img
-                        src="price-vinyl-beschaedigt.jpg"
-                        width="2000"
-                        height="1333"
-                        alt="Beispiel Vorher: beschädigter Vinylboden"
+                        src="projekte-vinyl-vorher.jpg"
+                        width="1402"
+                        height="1122"
+                        alt="Vorher: beschädigter Vinylboden"
                         loading="lazy"
                         decoding="async"
                         class="project-mock__img"
@@ -217,14 +238,14 @@
                   <div class="project-mock__frame">
                     <picture>
                       <source
-                        srcset="material-laminat-vinyl-boden.avif"
+                        srcset="projekte-vinyl-nachher.avif"
                         type="image/avif"
                       />
                       <img
-                        src="material-laminat-vinyl-boden.jpg"
-                        width="2000"
-                        height="1329"
-                        alt="Beispiel Nachher: sanierte Vinylfläche"
+                        src="projekte-vinyl-nachher.jpg"
+                        width="1402"
+                        height="1122"
+                        alt="Nachher: sanierte Vinylfläche"
                         loading="lazy"
                         decoding="async"
                         class="project-mock__img"
@@ -237,6 +258,30 @@
                 </figure>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section-muted section-tight projekte-page__cta"
+        aria-labelledby="projekte-cta-title"
+      >
+        <div class="container">
+          <h2 class="section-title" id="projekte-cta-title">
+            Nächster Schritt
+          </h2>
+          <p class="muted projekte-page__cta-lead">
+            Schicken Sie uns Fotos vom Schaden – wir melden uns mit einer
+            ehrlichen Einschätzung. Unter Leistungen &amp; Preise finden Sie
+            unsere üblichen Richtspannen.
+          </p>
+          <div class="projekte-page__cta-actions">
+            <a class="btn btn-primary btn-lg" href="kontakt.html#formular"
+              >Offerte oder Frage</a
+            >
+            <a class="btn btn-ghost btn-lg" href="leistungen.html"
+              >Leistungen &amp; Preise</a
+            >
           </div>
         </div>
       </section>
@@ -256,7 +301,8 @@
             <p class="footer-copy">
               <span class="footer-copy__main">&copy; 2026 parkettflick.ch</span>
               <span class="footer-copy__sep" aria-hidden="true">·</span>
-              <span class="footer-copy__locale">Schweiz</span>
+              <span class="footer-copy__locale">Schweiz</span><br />
+              <span class="footer-copy__credit">build by <a href="https://prismacodex.ch" class="footer-copy__link">PrismaCodex</a></span>
             </p>
           </div>
           <nav class="footer-nav" aria-label="Schnellzugriff">
