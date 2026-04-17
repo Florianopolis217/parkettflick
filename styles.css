@@ -1525,6 +1525,21 @@ section {
   margin-bottom: 0.8rem;
 }
 
+.legal-address {
+  font-style: normal;
+  margin: 0.75rem 0 1rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(180deg, #faf8f4 0%, #fff 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.legal-address__placeholder {
+  color: var(--muted);
+}
+
 .legal-text h2 {
   margin-top: 1.7rem;
   margin-bottom: 0.5rem;
